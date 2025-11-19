@@ -1,6 +1,6 @@
 # HTML Preprocessor - Complete Understanding Guide
 
-## 🎯 What Does This Script Do?
+## What Does This Script Do?
 
 This script **cleans messy HTML** before you parse it with BeautifulSoup. Think of it as a "pre-wash" for dirty HTML that removes ads, scripts, styling, and other junk.
 
@@ -65,7 +65,7 @@ When you call `.clean()`, it automatically:
 
 ---
 
-## 🎨 Custom Cleaning (Advanced)
+## Custom Cleaning (Advanced)
 
 You can chain methods to customize what gets removed:
 
@@ -85,7 +85,7 @@ cleaned = (pp
 
 ---
 
-## 🔍 Analyzing Before Cleaning
+## Analyzing Before Cleaning
 
 Want to see what's in the HTML first?
 
@@ -104,10 +104,10 @@ print(analysis['headings'])        # All h1, h2, etc.
 
 **Output example:**
 ```
-📊 Total tags: 1,234
-📊 Unique tag types: 45
+Total tags: 1,234
+Unique tag types: 45
 
-🏷️  Most common tags:
+  Most common tags:
    <div>: 456
    <span>: 234
    <p>: 123
@@ -115,7 +115,7 @@ print(analysis['headings'])        # All h1, h2, etc.
 
 ---
 
-## 🎯 Real-World Examples
+##  Real-World Examples
 
 ### **Example 1: Scraping News Article**
 ```python
@@ -155,7 +155,7 @@ cleaned = pp.clean(analyze_first=True, interactive=True)
 
 ---
 
-## 🔄 Method Chaining Explained
+##  Method Chaining Explained
 
 **Without chaining:**
 ```python
@@ -180,14 +180,14 @@ Both do the same thing! Chaining just looks nicer.
 
 ---
 
-## 🚨 Common Mistakes
+##  Common Mistakes
 
-### ❌ **Mistake 1: Not providing HTML or URL**
+###  **Mistake 1: Not providing HTML or URL**
 ```python
 pp = HTMLPreprocessor()  # ERROR: Must provide html_string or url
 ```
 
-### ❌ **Mistake 2: Providing both**
+###  **Mistake 2: Providing both**
 ```python
 pp = HTMLPreprocessor(
     html_string="<html>...",
@@ -195,7 +195,7 @@ pp = HTMLPreprocessor(
 )
 ```
 
-### ❌ **Mistake 3: Forgetting to clean**
+###  **Mistake 3: Forgetting to clean**
 ```python
 pp = HTMLPreprocessor(url="https://example.com")
 soup = BeautifulSoup(pp.html, 'html.parser')  # Still has junk!
@@ -207,7 +207,7 @@ soup = BeautifulSoup(cleaned, 'html.parser')
 
 ---
 
-## 🧠 When to Use Each Method
+##  When to Use Each Method
 
 | Method | When to Use |
 |--------|-------------|
@@ -219,7 +219,7 @@ soup = BeautifulSoup(cleaned, 'html.parser')
 
 ---
 
-## 💡 Pro Tips
+##  Pro Tips
 
 1. **Start with `.analyze()`** to see what's in the HTML
 2. **Use `.clean()` first** - it handles 90% of cases
@@ -232,7 +232,7 @@ soup = BeautifulSoup(cleaned, 'html.parser')
 
 ---
 
-## 🎓 Quick Reference Card
+##  Quick Reference Card
 
 ```python
 # INITIALIZATION
@@ -262,7 +262,7 @@ pp.reset()                  # Reset to original
 
 ---
 
-## ✅ Complete Working Example
+##  Complete Working Example
 
 ```python
 from html_preprocessor import HTMLPreprocessor
@@ -296,7 +296,7 @@ print(f"Paragraphs: {len(paragraphs)}")
 
 ---
 
-## 🎯 The Bottom Line
+##  The Bottom Line
 
 **Think of it this way:**
 - **Raw HTML** = Dirty laundry (full of stains, tags, lint)
